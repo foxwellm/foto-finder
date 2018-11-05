@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foto Finder</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,800" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="main-header">
+  <div class="main-header-title-container">
+    <h1 class="main-header-title">FOTO<img class="main-header-title-logo" src="images/foto-finder-logo.svg"/>FINDER</h1>
+  </div>
+  <form class="header-search-bar-container">
+    <input type="text" class="search-bar-input" placeholder="Search">
+    <button class="search-bar-btn"><i class="fas fa-search"></i></button>
+  </form>
+</header>
+
+<section class="main-input-section">
+  <form class="input-section-form">
+
+    <div class="section-title-container">
+      <div class="section-title">Title</div>
+      <input type="text" class="photo-title-input section-input-button">
+    </div>
+
+    <div class="section-caption-container">
+      <div class="section-caption">Caption</div>
+      <input type="text" class="photo-caption-input section-input-button">
+    </div>
+
+    <div class="section-buttons-container">
+      <label for="files" class="choose-file section-input-button"><span class="choose-file-text">Choose File</span>
+      <input type="file" id="files"></label>
+      <button class="view-favorites section-input-button favorites"></button>
+      <button class="add-to-album section-input-button">Add to Album</button>
+    </div>
+
+  </form>
+</section>
+<div class="show-more-features">
+    <section class="user-images-container max-height"></section>
+    <div class="show-buttons-container">
+      <button class="show-buttons show-more-btn">Show More</button>
+      <button class="show-buttons show-less-btn more-less-toggle">Show Less</button>
+    </div>
+  </div>    
+  <script src="photo.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

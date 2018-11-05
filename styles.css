@@ -1,0 +1,293 @@
+ * {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100%;
+}
+
+/*HEADER*/
+.main-header {
+  width: 100%;
+  display: flex;
+  background-color: #3E2A35;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header-title-container {
+ margin-left: 20px;
+}
+
+.main-header-title {
+  font-weight: 800;
+  color: white;
+  font-size: 50px;
+}
+
+.main-header-title-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px -10px;
+}
+
+.header-search-bar-container {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-input {
+  font-size: 30px;
+  height: 50px;
+  padding-left: 20px;
+  border: 2px solid grey;
+}
+
+.fa-search {
+  font-size: 43px;
+  color: #FFF;
+  background-color: grey;
+  border: 2px solid grey;
+}
+
+/*MAIN*/
+.main-input-section {
+  width: 100%;
+  background-color: #3E2A35;
+}
+
+.input-section-form {
+  width: 750px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.section-title-container,
+.section-caption-container {
+  display: flex;
+  flex-direction: column;
+}
+.section-title,
+.section-caption {
+  color: #FFF;
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.section-input-button {
+  height: 60px;
+}
+
+.photo-title-input,
+.photo-caption-input {
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.section-buttons-container {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+}
+
+.choose-file {
+  width: 100%;
+  margin: 40px 0;
+  background-color: #5B4447;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-file-text {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#files {
+  display: none;
+}
+
+.view-favorites,
+.add-to-album {
+  width: 40%;
+  margin-bottom: 40px;
+  background-color: #5B4447;
+  color: #FFF;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.user-images-container {
+  background-color: #C2B2B4;
+  width: 100%;
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
+}
+
+.images-card {
+  width: 300px;
+  border: 2px solid #5B4447;
+  background-color: #FFF;
+  margin: auto;
+}
+
+.title-output-container {
+
+}
+
+.title-output {
+  padding: 5px 10px;
+  margin: 0px;
+
+}
+
+.caption-output {
+  padding: 5px 10px;
+}
+
+.photo-output-container {
+
+}
+
+.photo-output {
+  height: 200px;
+  width: 296px;
+  position: relative;
+  left: 0px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5B4447;
+  height: 50px;
+  align-items: center;
+}
+
+.card-delete-button {
+  background-image: url('images/delete.svg');
+  width: 29px;
+  height: 30px;
+  margin: 10px;
+}
+
+.card-delete-button:hover {
+  background-image: url('images/delete-active.svg');
+}
+
+.card-favorite-button  {
+  width: 29px;
+  height: 27px;
+  margin: 10px;
+}
+
+.favorite-false {
+  background-image: url('images/favorite.svg');
+}
+
+.favorite-true {  
+  background-image: url('images/favorite-active.svg');
+}
+
+.favorite-false:hover {
+    background-image: url('images/favorite-active.svg');
+}
+
+.favorite-true:hover {
+    background-image: url('images/favorite.svg');
+}
+
+.show-buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 600px;
+}
+
+.show-buttons {
+  background-color: #B2A1B1; 
+  margin: 8px 0 ;
+  outline-color: #B2A1B1;
+  width: 100%;
+}
+
+.more-less-toggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 920px) {
+  .input-section-form {
+    width: 80%;
+  }
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-header-title-container {
+    margin: 0;
+  }
+
+  .header-search-bar-container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .user-images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .images-card {
+    margin: 30px auto 0;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .main-header-title {
+    font-size: 10vw;
+  }
+
+  .main-header-title-logo {
+    font-size: 10vw;
+  }
+
+  .header-search-bar-container {
+    width: 80%;
+  }
+
+  .search-bar-input {
+    font-size: 6vw;
+  }
+
+  .fa-search {
+
+  }
+
+  .section-title,
+  .section-caption,
+  .choose-file-text,
+  .view-favorites,
+  .add-to-album {
+    font-size: 4vw;
+  }
+}
+
+
