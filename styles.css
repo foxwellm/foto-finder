@@ -8,11 +8,10 @@
 
 /*HEADER*/
 .main-header {
-  width: 100%;
-  display: flex;
   background-color: #3E2A35;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .main-header-title-container {
@@ -20,31 +19,31 @@
 }
 
 .main-header-title {
-  font-weight: 800;
   color: #FFF;
   font-size: 50px;
+  font-weight: 800;
 }
 
 .main-header-title-logo {
-  width: 60px;
   height: 60px;
   margin: 0 15px -10px;
+  width: 60px;
 }
 
 .header-search-bar-container {
-  margin-right: 20px;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-right: 20px;
 }
 
 .search-bar-input {
-  font-size: 30px;
-  padding-left: 20px;
   border: 2px solid #C2B2B4;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
+  font-size: 30px;
   height: 50px;
   outline: none;
+  padding-left: 20px;
   width: 380px;
 }
 
@@ -66,14 +65,14 @@
 
 /*MAIN*/
 .main-input-section {
-  width: 100%;
   background-color: #3E2A35;
+  width: 100%;
 }
 
 .input-section-form {
-  width: 750px;
   margin: auto;
   padding: 50px 0;
+  width: 750px;
 }
 
 .section-title-container,
@@ -85,10 +84,10 @@
 .section-title,
 .section-caption {
   color: #FFF;
-  padding: 5px 0;
   font-size: 20px;
   font-weight: 600;
   margin-top: 10px;
+  padding: 5px 0;
 }
 
 .section-input-button {
@@ -98,8 +97,8 @@
 .photo-title-input,
 .photo-caption-input {
   font-size: 30px;
-  padding-left: 20px;
   outline: none;
+  padding-left: 20px;
 }
 
 .section-buttons-container {
@@ -109,12 +108,12 @@
 }
 
 .choose-file {
-  width: 100%;
-  margin: 40px 0;
+  align-items: center;
   background-color: #5B4447;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 40px 0;
+  width: 100%;
 }
 
 .choose-file-text {
@@ -129,14 +128,14 @@
 
 .view-favorites,
 .add-to-album {
-  width: 40%;
-  margin-bottom: 40px;
-  background-color: #5B4447;
   color: #FFF;
+  background-color: #5B4447;
   border: none;
   font-weight: 600;
   font-size: 20px;
+  margin-bottom: 40px;
   outline: none;
+  width: 40%;
 }
 
 .view-favorites:hover,
@@ -151,58 +150,58 @@
 
 .user-images-container {
   background-color: #C2B2B4;
-  width: 100%;
-  padding: 30px 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-row-gap: 30px;
   grid-column-gap: 10px;
+  padding: 30px 50px;
+  width: 100%;
 }
 
 .images-card {
-  width: 300px;
-  border: 2px solid #5B4447;
   background-color: #FFF;
+  border: 2px solid #5B4447;
   margin: auto;
+  width: 300px;
 }
 
 .title-output {
-  padding: 5px 10px;
-  margin: 0px;
+  color: #5B4447;
   font-size: 26px;
   font-weight: 600;
-  color: #5B4447;
   line-height: 30px;
+  margin: 0px;
+  padding: 5px 10px;
 }
 
 .caption-output {
-  padding: 5px 10px;
+  color: #5B4447;
   font-size: 26px;
   font-weight: 600;
-  color: #5B4447;
   line-height: 30px;
+  padding: 5px 10px;
 }
 
 .photo-output {
   height: 200px;
-  width: 296px;
-  position: relative;
   left: 0px;
+  position: relative;
+  width: 296px;
 }
 
 .button-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: #5B4447;
-  height: 50px;
   align-items: center;
+  background-color: #5B4447;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
 }
 
 .card-delete-button {
   background-image: url('images/delete.svg');
-  width: 29px;
   height: 30px;
   margin: 10px;
+  width: 29px;
 }
 
 .card-delete-button:hover {
@@ -210,9 +209,9 @@
 }
 
 .card-favorite-button  {
-  width: 29px;
   height: 27px;
   margin: 10px;
+  width: 29px;
 }
 
 .favorite-false {
@@ -232,20 +231,20 @@
 }
 
 .show-buttons-container {
+  background-color: #C2B2B4;
   display: flex;
   flex-direction: column;
   margin: auto;
   width: 100%;
-  background-color: #C2B2B4;
 }
 
 .show-buttons {
   background-color: #5B4447; 
-  margin: 20px 20px ;
-  height: 40px;
   color: #FFF;
-  width: 100px;
+  height: 40px;
+  margin: 20px 20px ;
   outline: none;
+  width: 100px;
 }
 
 .show-buttons:hover {
@@ -262,9 +261,9 @@
   }
 
   .main-header {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .main-header-title-container,
@@ -296,8 +295,8 @@
   }
 
   .header-search-bar-container {
-    width: 80%;
     display: flex;
+    width: 80%;
   }
 
   .search-bar-input {

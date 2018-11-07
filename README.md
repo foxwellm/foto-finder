@@ -15,4 +15,4 @@ Link to app: [public link](https://foxwellm.github.io/foto-finder/)
 ![Finished Version](/images/fotofinder-original.png)
 
 ## My adaptation:
-![Finished Version](/images/my-adaptationt.png)
+![Finished Version](/images/my-adaptation.png)
