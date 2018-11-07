@@ -13,7 +13,6 @@ function createImageElement() {
     event.preventDefault();
     const chooseFile = document.querySelector('#files');
     if (chooseFile.files[0]) {
-    console.log('hi');
     reader.readAsDataURL(chooseFile.files[0]); 
     reader.onload = createNewCard;
   }
@@ -32,14 +31,6 @@ function createNewCard() {
   disableSaveButton();
 }
 
-function addPhoto(e) {
-  var newPhoto = new Photo(Date.now(), e.target.result)
-  console.log(reader.result)
-  photoGallery.innerHTML += `<img src=${e.target.result} />`;
-  imagesArr.push(newPhoto)
-  newPhoto.saveToStorage(imagesArr)
-}
-
 function createCardTemplate(id, title, caption, image, favorite) {
   const cardsContainer = document.querySelector('.user-images-container');
   let favoriteClass;
@@ -48,7 +39,6 @@ function createCardTemplate(id, title, caption, image, favorite) {
   } else { 
     favoriteClass = "favorite-false";
     }
-
   const newCard = 
   `<article id="${id}" class="images-card">
         <section class="output-container">
@@ -74,7 +64,7 @@ function filterSearch() {
   allCards().forEach(function(cards) {
     cards.forEach(function(card) {
       const { id, title, caption, image, favorite } = card;
-      if (card.title.indexOf(filterInput)!== -1 || card.caption.indexOf(filterInput)!== -1) {
+      if (card.title.toLowerCase().indexOf(filterInput)!== -1 || card.caption.toLowerCase().indexOf(filterInput)!== -1) {
       createCardTemplate(id, title, caption, image, favorite);
     }
     })
@@ -97,8 +87,12 @@ function disableSaveButton() {
   const fileInput = document.querySelector('#files');
   if (titleInput.value === '' || bodyInput.value === '' || fileInput.value === '') {
     saveButton.disabled = true;
+    saveButton.classList.add('disabled-btn');
+    saveButton.classList.remove('add-to-album-hover');
   } else {
     saveButton.disabled = false;
+    saveButton.classList.remove('disabled-btn');
+    saveButton.classList.add('add-to-album-hover');
   }
 }
 
@@ -141,7 +135,7 @@ function favoriteBtnText() {
     const viewFavorites = document.querySelector('.view-favorites');
   if (numOfFavorites > 1) {
     viewFavorites.innerHTML = "View " + numOfFavorites + " Favorites";
-  } else if  (numOfFavorites === 1){
+  } else if  (numOfFavorites === 1) {
     viewFavorites.innerHTML = "View " + numOfFavorites + " Favorite";
   } else {
     viewFavorites.innerHTML = "No Favorites Yet";
