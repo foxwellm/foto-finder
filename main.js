@@ -1,4 +1,4 @@
-document.querySelector('.add-to-album').addEventListener('click', createNewCard);
+document.querySelector('.add-to-album').addEventListener('click', createImageElement);
 document.querySelector('.photo-title-input').addEventListener('keyup', disableSaveButton);
 document.querySelector('.photo-caption-input').addEventListener('keyup', disableSaveButton);
 document.querySelector('#files').addEventListener('change', disableSaveButton);
@@ -7,12 +7,24 @@ document.querySelector('.show-less-btn').addEventListener('click', showMoreLessC
 document.querySelector('.view-favorites').addEventListener('click', showAllFavorites);
 document.querySelector('.search-bar-input').addEventListener('keyup', filterSearch);
 
+var reader = new FileReader();
+
+function createImageElement() {
+    event.preventDefault();
+    const chooseFile = document.querySelector('#files');
+    if (chooseFile.files[0]) {
+    console.log('hi');
+    reader.readAsDataURL(chooseFile.files[0]); 
+    reader.onload = createNewCard;
+  }
+}
+
 function createNewCard() {
   event.preventDefault();
   const titleInput = document.querySelector('.photo-title-input');
   const captionInput = document.querySelector('.photo-caption-input');
   const chooseFile = document.querySelector('#files');
-  const photoInput = URL.createObjectURL(chooseFile.files[0]);
+  const photoInput = reader.result;
   const photo = new Photo(titleInput.value, captionInput.value, photoInput);
   createCardTemplate(photo.id, photo.title, photo.caption, photo.image, photo.favorite);
   photo.saveToStorage();
@@ -20,12 +32,22 @@ function createNewCard() {
   disableSaveButton();
 }
 
+function addPhoto(e) {
+  var newPhoto = new Photo(Date.now(), e.target.result)
+  console.log(reader.result)
+  photoGallery.innerHTML += `<img src=${e.target.result} />`;
+  imagesArr.push(newPhoto)
+  newPhoto.saveToStorage(imagesArr)
+}
+
 function createCardTemplate(id, title, caption, image, favorite) {
   const cardsContainer = document.querySelector('.user-images-container');
   let favoriteClass;
   if (favorite) {
     favoriteClass = "favorite-true";
-  } else { favoriteClass = "favorite-false"; }
+  } else { 
+    favoriteClass = "favorite-false";
+    }
 
   const newCard = 
   `<article id="${id}" class="images-card">
