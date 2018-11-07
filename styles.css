@@ -46,7 +46,6 @@
   height: 50px;
   outline: none;
   width: 380px;
-
 }
 
 .search-bar-btn {
@@ -82,6 +81,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .section-title,
 .section-caption {
   color: #FFF;
@@ -139,6 +139,16 @@
   outline: none;
 }
 
+.view-favorites:hover,
+.add-to-album-hover:hover,
+.choose-file:hover {
+  background-color: #938284;
+}
+
+.disabled-btn {
+  background-color: #C2B2B4;
+}
+
 .user-images-container {
   background-color: #C2B2B4;
   width: 100%;
@@ -156,22 +166,21 @@
   margin: auto;
 }
 
-.title-output-container {
-
-}
-
 .title-output {
   padding: 5px 10px;
   margin: 0px;
-
+  font-size: 26px;
+  font-weight: 600;
+  color: #5B4447;
+  line-height: 30px;
 }
 
 .caption-output {
   padding: 5px 10px;
-}
-
-.photo-output-container {
-
+  font-size: 26px;
+  font-weight: 600;
+  color: #5B4447;
+  line-height: 30px;
 }
 
 .photo-output {
@@ -215,11 +224,11 @@
 }
 
 .favorite-false:hover {
-    background-image: url('images/favorite-active.svg');
+  background-image: url('images/favorite-active.svg');
 }
 
 .favorite-true:hover {
-    background-image: url('images/favorite.svg');
+  background-image: url('images/favorite.svg');
 }
 
 .show-buttons-container {
@@ -239,25 +248,26 @@
   outline: none;
 }
 
+.show-buttons:hover {
+  background-color: #938284;
+}
+
 .more-less-toggle {
   display: none;
 }
-
 
 @media screen and (max-width: 920px) {
   .input-section-form {
     width: 80%;
   }
+
   .main-header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .main-header-title-container {
-    margin: 0;
-  }
-
+  .main-header-title-container,
   .header-search-bar-container {
     margin: 0;
   }
@@ -270,6 +280,7 @@
     justify-content: center;
     padding: 0;
   }
+
   .images-card {
     margin: 30px auto 0;
   }
@@ -295,10 +306,6 @@
 
   .search-bar-btn {
     width: 50px;
-  }
-
-  .fa-search {
-
   }
 
   .section-title,
